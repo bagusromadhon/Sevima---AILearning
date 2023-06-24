@@ -4,11 +4,6 @@
 
      <title>AILearning</title>
 <!--
-
-DIGITAL TREND
-
-https://templatemo.com/tm-538-digital-trend
-
 -->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -16,15 +11,15 @@ https://templatemo.com/tm-538-digital-trend
      <meta name="keywords" content="">
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
-     <link rel="stylesheet" href="css/owl.carousel.min.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     {{ asset('css/Guest/templatemo-digital-trend.css') }}
+     <link rel="stylesheet" href="{{ asset('css/Guest/bootstrap.min.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/fonts/guest/font-awesome.min.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/Guest/aos.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/Guest/owl.carousel.min.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/Guest/owl.theme.default.min.css') }}">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+     <link rel="stylesheet" href="{{ asset('css/Guest/templatemo-digital-trend.css') }}">
 
 </head>
 <body>
@@ -81,7 +76,7 @@ https://templatemo.com/tm-538-digital-trend
                         <div class="col-lg-6 col-12">
                           <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
 
-                            <img src="images/logo_belajar.png" class="img-fluid" alt="working girl">
+                            <img src="{{ asset('images/logo_belajar.png') }}" class="img-fluid" alt="working girl">
                           </div>
                         </div>
 
@@ -313,12 +308,12 @@ https://templatemo.com/tm-538-digital-trend
 
 
      <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+     <script src="{{ asset('js/Guest/LandingPage/jquery.min.js') }}"></script>
+     <script src="{{ asset('js/Guest/LandingPage/bootstrap.min.js') }}"></script>
+     <script src="{{ asset('js/Guest/LandingPage/aos.js') }}"></script>
+     <script src="{{ asset('js/Guest/LandingPage/owl.carousel.min.js') }}"></script>
+     <script src="{{ asset('js/Guest/LandingPage/smoothscroll.js') }}"></script>
+     <script src="{{ asset('js/Guest/LandingPage/custom.js') }}"></script>
 
 </body>
 </html>
