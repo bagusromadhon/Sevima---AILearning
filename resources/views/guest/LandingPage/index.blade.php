@@ -11,7 +11,7 @@
      <meta name="keywords" content="">
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-     {{ asset('css/Guest/templatemo-digital-trend.css') }}
+     
      <link rel="stylesheet" href="{{ asset('css/Guest/bootstrap.min.css') }}">
      <link rel="stylesheet" href="{{ asset('css/fonts/guest/font-awesome.min.css') }}">
      <link rel="stylesheet" href="{{ asset('css/Guest/aos.css') }}">
@@ -76,7 +76,7 @@
                         <div class="col-lg-6 col-12">
                           <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
 
-                            <img src="{{ asset('images/logo_belajar.png') }}" class="img-fluid" alt="working girl">
+                            <img src="{{ asset('images/Guest/logo_belajar.png') }}" class="img-fluid" alt="working girl">
                           </div>
                         </div>
 
@@ -101,7 +101,7 @@
 
                          <div class="about-image" data-aos="fade-up" data-aos-delay="200">
 
-                          <img src="images/Belajar_mudah.png" class="img-fluid" alt="office">
+                          <img src="{{ asset('images/Guest/Belajar_mudah.png') }}" class="img-fluid" alt="office">
                         </div>
                     </div>
 
@@ -124,7 +124,7 @@
 
                          <div class="owl-carousel owl-theme" id="project-slide">
                               <div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
-                                   <img src="images/project/project-image01.jpg" class="img-fluid" alt="project image">
+                                   <img src="{{ asset('images/Guest/project/project-image01.jpg') }}" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
                                      
@@ -141,7 +141,7 @@
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image02.jpg" class="img-fluid" alt="project image">
+                                   <img src="{{ asset('images/Guest/project/project-image02.jpg') }}" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
                                         <small>(Siswa)</small>
@@ -158,7 +158,7 @@
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image03.jpg" class="img-fluid" alt="project image">
+                                   <img src="{{ asset('images/Guest/project/project-image03.jpg') }}" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
                                         <small>(Guru)</small>
@@ -175,7 +175,7 @@
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image04.jpg" class="img-fluid" alt="project image">
+                                   <img src="{{ asset('images/Guest/project/project-image04.jpg') }}" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
                                         <small>(Siswa)</small>
@@ -192,7 +192,7 @@
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image05.jpg" class="img-fluid" alt="project image">
+                                   <img src="{{ asset('images/Guest/project/project-image05.jpg') }}" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
                                         <small>Video</small>
@@ -221,7 +221,7 @@
                     <div class="col-lg-6 col-md-5 col-12">
                         <div class="contact-image" data-aos="fade-up">
 
-                          <img src="images/female-avatar.png" class="img-fluid" alt="website">
+                          <img src="{{ asset('images/Guest/female-avatar.png') }}" class="img-fluid" alt="website">
                         </div>
                     </div>
 
