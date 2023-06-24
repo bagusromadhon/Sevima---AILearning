@@ -26,18 +26,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('guest/LandingPage/index');
 });
-Route::view('/user/login', 'user.login.index')->name('user.login.index');
+// Route::view('/user/login', 'user.login.index')->name('/login');
 
 // route API Chat GPT
 Route::get('/ai',[AiController::class,'index']); 
 Route::post('/ai',[AiController::class,'store']);
 Route::get('/reset',[AiController::class,'destroy']);
 
-// route Login USer
+Route::view('/user/login', 'user.login.index')->name('user.login.index');
 
-Route::get('user/login', [SiswaController::class, 'showLoginForm'])->name('user.login.index');
-Route::post('user/login', [SiswaController::class, 'login'])->name('user.login');
-Route::post('/user/login', 'SiswaController@login')->name('user.login');
+Route::get('/register', [SiswaController::class,'register'])->name('register');
+Route::post('/register', [SiswaController::class,'registerPost'])->name('register');
 
 
 

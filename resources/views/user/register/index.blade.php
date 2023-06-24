@@ -2,36 +2,45 @@
 <html lang="en">
 <head>
   <link rel="stylesheet"  href="{{ asset('css/register/index.css') }}">
-  <title>HASH TECHIE OFFICIAL</title>
+  <title>AILearning</title>
 </head>
 <body>
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="">
+                @if (Session::has('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger" role="alert">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}<br>
+                        @endforeach
+                    </div>
+                @endif
+                <form action="{{ route('register') }}" method="POST">
+                    @csrf
                     <h2>Register</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="text" required>
+                        <input type="text" name="username" required>
                         <label for="">Username</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label for="">Password</label>
                     </div>
-                    <!-- <div class="forget">
-                        <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
-                      
-                    </div> -->
                     <button>Register</button>
                     <div class="register">
-                        <p>have a account ? <a href="#">Login</a></p>
+                        <p>have an account? <a href="#">Login</a></p>
                     </div>
                 </form>
             </div>

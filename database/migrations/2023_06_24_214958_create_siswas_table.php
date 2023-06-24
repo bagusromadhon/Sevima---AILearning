@@ -4,14 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSiswaTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('siswa', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->bigIncrements('id_siswa');
             $table->string('username');
             $table->string('email')->unique();
@@ -20,13 +20,12 @@ class CreateSiswaTable extends Migration
             $table->timestamps();
         });
     }
-    
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('siswa');
+        Schema::dropIfExists('siswas');
     }
 };

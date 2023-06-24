@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="{{ asset('css/login/index.css') }}">
-  <title>HASH TECHIE OFFICIAL</title>
+  <title>AILearning</title>
 </head>
 <body>
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="{{ route('user.login') }}" method="POST">
+                <form action="" method="POST">
                     @csrf
                     <h2>Login</h2>
                     <div class="inputbox">
