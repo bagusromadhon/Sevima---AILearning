@@ -12,7 +12,7 @@ class AiController extends Controller
  public function index(){
     $messages = collect(session('messages', []))->reject(fn($messages)=>
     
-    $messages['role'] == 'system');
+    $messages['role'] === 'system');
 
     return view('AI/index',[
         'messages'=> $messages
@@ -34,6 +34,10 @@ class AiController extends Controller
     $messages[] = ['role' => 'assistant','content'=> $response->choices[0]->
     message->content];
     $request->session()->put('messages',$messages);
-    return redirect('/');
+    return redirect('/ai');
+ }
+ public function destroy(Request $request ){
+    $request->session()->forget('messages');
+    return redirect('/ai');
  }
 }
