@@ -29,6 +29,6 @@ class SiswaController extends Controller
         $siswa->kode_kelas = null;
 
         $siswa->save();
-        return back()->with('success','Register successfully');
+        return back()->with('success','Register successfullyi');
     }
 }
