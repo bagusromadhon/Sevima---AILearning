@@ -32,11 +32,11 @@
                     </div>
             </div>
         @endforeach
-        <form class="p-4 flex space-x-4 justifly-center items-center" action="/" method="POST">
+        <form class="p-4 flex space-x-4 justifly-center items-center" action="/ai" method="POST">
         @csrf
         <label for="message">Ask Somethin</label>
         <input type="text" id="message" name="message" autocomplete="off" class="border rounded-md p-2 flex-1">
-            <a class="bg-gray-800 text-white p-2 rounded-md" href="#">Resent Chat</a>
+            <a class="bg-gray-800 text-white p-2 rounded-md" href="/reset">Hapus Log Chat</a>
     </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

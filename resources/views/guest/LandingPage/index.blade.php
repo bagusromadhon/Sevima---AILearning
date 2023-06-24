@@ -67,7 +67,7 @@
 
                                    <h1 class="text-white" data-aos="fade-up">Belajar Dengan AI , Semakin mudah</h1>
 
-                                   <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Coba Sekarang</a>
+                                   <a href="{{ route('user.login.index') }}" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Coba Sekarang</a>
 
                                    <!-- <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong> -->
                               </div>

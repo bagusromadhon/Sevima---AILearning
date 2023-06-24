@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AiController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,22 @@ use Illuminate\Support\Facades\Route;
 //     return view('user/dashboard/index');
 // });
 
-Route::get('/',[AiController::class,'index']); 
-Route::post('/',[AiController::class,'store']);
+// guest 
+Route::get('/', function () {
+    return view('guest/LandingPage/index');
+});
+Route::view('/user/login', 'user.login.index')->name('user.login.index');
 
+// route API Chat GPT
+Route::get('/ai',[AiController::class,'index']); 
+Route::post('/ai',[AiController::class,'store']);
+Route::get('/reset',[AiController::class,'destroy']);
+
+// route Login USer
+
+Route::get('user/login', [SiswaController::class, 'showLoginForm'])->name('user.login.index');
+Route::post('user/login', [SiswaController::class, 'login'])->name('user.login');
+Route::post('/user/login', 'SiswaController@login')->name('user.login');
 
 
 
