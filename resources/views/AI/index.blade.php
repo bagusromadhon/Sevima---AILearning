@@ -26,7 +26,7 @@
                         </div>
                         <div class="mt-1">
                             <p class="text-grey-600">
-                                {{!! \illuminat\Mail\Markdown::parse($message['content']) !!}}
+                                {!! \Illuminate\Mail\Markdown::parse($message['content']) !!}
                             </p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
         @csrf
         <label for="message">Ask Somethin</label>
         <input type="text" id="message" name="message" autocomplete="off" class="border rounded-md p-2 flex-1">
-            <a class="bg-gray-800 text-white p-2 rounded-md" href="#"></a>
+            <a class="bg-gray-800 text-white p-2 rounded-md" href="#">Resent Chat</a>
     </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
