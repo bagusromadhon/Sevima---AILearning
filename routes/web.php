@@ -26,6 +26,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('guest/LandingPage/index');
 });
+
+Route::get('/user/dashboard', function () {
+    return view('user/dashboard/index');
+});
 // Route::view('/user/login', 'user.login.index')->name('/login');
 
 // route API Chat GPT
@@ -35,8 +39,10 @@ Route::get('/reset',[AiController::class,'destroy']);
 
 Route::view('/user/login', 'user.login.index')->name('user.login.index');
 
+// login /register user
 Route::get('/register', [SiswaController::class,'register'])->name('register');
 Route::post('/register', [SiswaController::class,'registerPost'])->name('register');
-
+Route::get('/login',[SiswaController::class,'login'])->name('login');
+Route::post('/login',[SiswaController::class,'loginPost'])->name('login');
 
 

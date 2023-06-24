@@ -8,7 +8,12 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="" method="POST">
+                @if (Session::has('error'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ Session::get('error') }}
+                    </div>
+                @endif
+                <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <h2>Login</h2>
                     <div class="inputbox">
@@ -26,7 +31,7 @@
                     </div> -->
                     <button type="submit">Log in</button>
                     <div class="register">
-                        <p>Don't have an account? <a href="#">Register</a></p>
+                        <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
                     </div>
                 </form>
             </div>

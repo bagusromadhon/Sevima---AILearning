@@ -5,6 +5,7 @@ use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class SiswaController extends Controller
 {
@@ -30,5 +31,22 @@ class SiswaController extends Controller
 
         $siswa->save();
         return back()->with('success','Register successfullyi');
+    }
+
+    public function login()
+    {
+        return view('user.login.index');
+    }
+    public function loginPost(Request $request)
+    {
+        $credetials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        if (Auth::attempt($credetials)) 
+        {
+            return redirect()->route('user.dashboard')->with('success', 'Login Berhasil');
+        }
+        return back()->with('error','Email or Password salah');
     }
 }
