@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Siswa;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
@@ -39,14 +40,15 @@ class SiswaController extends Controller
     }
     public function loginPost(Request $request)
     {
-        $credetials = [
+        $credentials = [
             'email' => $request->email,
             'password' => $request->password,
         ];
-        if (Auth::attempt($credetials)) 
-        {
+
+        if (Auth::guard('siswa')->attempt($credentials)) {
             return redirect()->route('user.dashboard')->with('success', 'Login Berhasil');
         }
-        return back()->with('error','Email or Password salah');
+
+        return back()->with('error', 'Email or Password salah');
     }
 }

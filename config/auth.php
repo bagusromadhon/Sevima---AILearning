@@ -34,13 +34,19 @@ return [
     | Supported: "session"
     |
     */
-
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'siswa' => [
+            'driver' => 'session',
+            'provider' => 'siswas',
+        ],
     ],
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -62,8 +68,15 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+
+        'siswa' => [
+            'driver' => 'eloquent',
             'model' => App\Models\Siswa::class,
         ],
+
+
 
         // 'users' => [
         //     'driver' => 'database',
