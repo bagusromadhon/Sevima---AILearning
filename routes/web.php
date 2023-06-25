@@ -29,7 +29,8 @@ Route::get('/', function () {
 
 Route::get('/user/dashboard', function () {
     return view('user/dashboard/index');
-});
+})->name('/user/dashboard');
+
 // Route::view('/user/login', 'user.login.index')->name('/login');
 
 // route API Chat GPT

@@ -31,7 +31,7 @@
                     </div> -->
                     <button type="submit">Log in</button>
                     <div class="register">
-                        <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
+                        <p>Don't have an account? <a href="{{ route('/user/dashboard') }}">Register</a></p>
                     </div>
                 </form>
             </div>
