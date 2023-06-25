@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>AILearning</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -34,7 +34,10 @@
         @endforeach
         <form class="p-4 flex space-x-4 justifly-center items-center" action="/ai" method="POST">
         @csrf
-        <label for="message">Ask Somethin</label>
+        <label for="message">Tanyakan Apa yang Ingin kamu Pelajari</label>
+        <br>
+        <label for="message">Contoh : Bersepeda</label>
+        
         <input type="text" id="message" name="message" autocomplete="off" class="border rounded-md p-2 flex-1">
             <a class="bg-gray-800 text-white p-2 rounded-md" href="/reset">Hapus Log Chat</a>
     </form>
