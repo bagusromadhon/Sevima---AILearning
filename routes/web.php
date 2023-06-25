@@ -33,7 +33,7 @@ Route::get('/user/dashboard', function () {
 // Route::view('/user/login', 'user.login.index')->name('/login');
 
 // route API Chat GPT
-Route::get('/ai',[AiController::class,'index']); 
+Route::get('/ai',[AiController::class,'index'])->name('nyobaai'); 
 Route::post('/ai',[AiController::class,'store']);
 Route::get('/reset',[AiController::class,'destroy']);
 
